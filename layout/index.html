@@ -9,7 +9,38 @@
     <title>Document</title>
 </head>
 <body>
-    <section class="bg-primary py-10">
+    <style>
+        #search-bar {
+            width: 100% !important;
+            max-width: 500px;
+        }
+
+        #user button {
+            width: 120px;
+        }
+
+        #sponsored-by > .sponsored-by-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 144px;
+            height: 80px;
+            padding: 10px;
+            background: #00000028;
+        }
+
+        #sponsored-by > .sponsored-by-item > img {
+            height: 100%;
+        }
+
+        #gallery-thumbnail > .swiper-items > .swiper-item {
+            width: 270px;
+            height: 195.5px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <section class="bg-heading-primary py-10">
         <div class="d-flex-row justify-content-between">
             <div id="social-media" class="d-flex-row gap-20">
                 <span>Follow us on:</span>
@@ -25,12 +56,94 @@
         </div>
     </section>
 
-    <section class="w-100 bg-image pos-relative px-0" style="height: 650px; background: red; background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/bg-1.png);">
-        <header class="px-30 d-flex-row align-items-center" style="height:80px;">
-            <img src="./img/logo.png">
+    <section class="w-100 bg-image pos-relative px-0" style="height: 750px; background: red; background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/bg-1.png);">
+        <header class="px-30 d-flex-row align-items-center justify-content-between" style="height:80px;">
+            <div class="d-flex-row align-items-center gap-20">
+                <img src="./img/logo.png">
+                <i class="icon-lg box-shadow-primary ri ri-menu-line text-white"></i>
+    
+                <div class="input-group w-max" id="search-bar">
+                    <i class="icon-md ri ri-search-line"></i>
+                    <input type="text" name="" id="" placeholder="Search user" class="blend">
+                </div>
+            </div>
+            <div class="h-group" id="user">
+                <button>Login</button>
+                <button>Sign Up</button>
+            </div>
         </header>
+
+        <div class="d-flex-row" style="height: calc(100% - 80px); padding-bottom: 60px;">
+            <!-- Interactive -->
+            <div class="d-flex-column justify-content-between px-80 h-100 text-white">
+                <div class="w-100 d-flex-column gap-40 h-100" style="padding-top: 80px;">
+                    <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur. Adipiscing nunc nulla tellus augue amet vel. At magnis ultrices leo varius scelerisque enim ornare a vitae. Cursus netus vel vehicula porttitor purus. Egestas duis ac a justo.</p>
+                    <div class="horizontal-group">
+                        <button style="width:200px;">See Our team squad</button>
+                        <button style="width:200px;" class="btn-secondary">Play selekdash</button>
+                    </div>
+                </div>
+
+                <div class="d-flex-column gap-10">
+                    <p class="fs-20 ff-russo-one">Powered By</p>
+
+                    <div class="h-group" id="sponsored-by">
+                        <div class="sponsored-by-item">
+                            <img src="./img/sponsored-by-1.png" alt="">
+                        </div>
+                        <div class="sponsored-by-item">
+                            <img src="./img/sponsored-by-2.png" alt="">
+                        </div>
+                        <div class="sponsored-by-item">
+                            <img src="./img/sponsored-by-3.png" alt="">
+                        </div>
+                        <div class="sponsored-by-item">
+                            <img src="./img/sponsored-by-4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mascot -->
+            <a href="#" class="flex-middle-center">
+                <img src="./img/mascot.png" alt="">
+            </a>
+        </div>
     </section>
 
-    <!-- Bootstrap -->
+    <section class="w-100 background-secondary flex-middle-center d-flex-column gap-40" style="height: 450px;">
+        <div>
+            <h1>About Selekda</h1>
+            <img src="./assets/horizontal-line.svg" alt="" class="w-100">
+        </div>
+        <span class="fs-20 txt-center">Lorem ipsum dolor sit amet consectetur. Faucibus sit facilisi viverra viverra ultricies. Quisque dignissim congue gravida tempor tristique cras porta ultrices diam. Feugiat aliquet aenean scelerisque auctor etiam in. Tempor vel ultrices nunc donec in et suspendisse.</span>
+    </section>
+
+    <section class="w-100 d-flex-column py-60 gap-30 background-primary section-bordered">
+        <div class="d-flex-column gap-60">
+            <div class="d-flex-column gap-20">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet consectetur. Faucibus sit facilisi viverra viverra ultricies. Quisque dignissim congue gravida tempor tristique cras porta ultrices diam. Feugiat aliquet aenean scelerisque auctor etiam in. Tempor vel ultrices nunc donec in et suspendisse.</p>
+            </div>
+
+            <div class="swiper" id="gallery-thumbnail">
+                <a href="#">
+                    <img src="./assets/move-left-lg.svg">
+                </a>
+                <!-- Place here -->
+                <div class="swiper-items">
+                    <div class="swiper-item bordered" style="background-image: url(./uploads/galleries/gallery-1.png);"></div>
+                    <div class="swiper-item bordered" style="background-image: url(./uploads/galleries/gallery-2.png);"></div>
+                    <div class="swiper-item bordered" style="background-image: url(./uploads/galleries/gallery-3.png);"></div>
+                    <div class="swiper-item bordered" style="background-image: url(./uploads/galleries/gallery-4.png);"></div>
+                </div>
+                <!--  -->
+                <a href="#">
+                    <img src="./assets/move-right-lg.svg">
+                </a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
