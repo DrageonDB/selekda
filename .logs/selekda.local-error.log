@@ -1,0 +1,2 @@
+[Fri May 31 13:16:25.281035 2024] [access_compat:error] [pid 18556:tid 1960] [client 127.0.0.1:58313] AH01797: client denied by server configuration: D:/htdocs2/selekda.local/.ssl
+[Fri May 31 13:16:40.822021 2024] [access_compat:error] [pid 18556:tid 1964] [client 127.0.0.1:58314] AH01797: client denied by server configuration: D:/htdocs2/selekda.local/.ssl/certs
