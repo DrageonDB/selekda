@@ -21,13 +21,13 @@
 }
 
 .pager > .pagination > .previous-page {
-    background: url(/layout/assets/move-left-sm.svg);
+    background: url(../assets/move-left-sm.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .pager > .pagination > .next-page {
-    background: url(/layout/assets/move-right-sm.svg);
+    background: url(../assets/move-right-sm.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
