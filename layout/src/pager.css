@@ -1,0 +1,81 @@
+.pager {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pager > .pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.pager > .pagination > .previous-page, .pagination > .next-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.pager > .pagination > .previous-page {
+    background: url(/layout/assets/move-left-sm.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pager > .pagination > .next-page {
+    background: url(/layout/assets/move-right-sm.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pager > .pagination > .page-selector {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.pager > .pagination > .page-selector > .page-selector-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: 'Russo One';
+    width: 40px;
+    height: 40px;
+    border: 5px solid #fff;
+    background: #fff;
+    color: #000;
+    box-shadow: 4px 4px 0 var(--btn-primary);
+    cursor: pointer;
+    user-select: none;
+}
+
+.pager > .pagination > .page-selector > .page-selector-item.active {
+    box-shadow: 4px 4px 0 #e4cb4c;
+    background: #e4cb4c;
+    color: #fff;
+}
+
+.pager > .pagination > .page-selector > input.page-selector-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: 'Russo One';
+    width: 40px;
+    height: 40px;
+    border: 5px solid #fff;
+    background: var(--btn-primary);
+    box-shadow: 4px 4px 0 var(--btn-primary);
+    color: #fff;
+    cursor: text;
+}
+
+.pager > .pagination > .page-selector > input::placeholder {
+    color: #fff;
+}

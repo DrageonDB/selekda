@@ -1,0 +1,167 @@
+body {
+    height: 100vh;
+    max-height: 100vh;
+    background: #000;
+    color: #fff;
+    min-height: 750px;
+}
+
+#loading {
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #141442;
+    transition: opacity ease .3s, visibility ease .3s;
+}
+
+#loading.disabled {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity ease .3s, visibility ease .3s;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 20px 40px;
+    max-width: fit-content;
+    margin: auto;
+    overflow: hidden;
+    min-height: 750px;
+}
+
+.pokedex > .pokedex-items {
+    display: grid;
+    align-content: flex-start;
+    grid-template: repeat(2, 275px) / repeat(5, 220px);
+    gap: 15px;
+    flex-wrap: wrap;
+    height: fit-content;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #fff transparent;
+}
+
+.pokedex > .pokedex-items > .pokedex-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    aspect-ratio: 4 / 5;
+    width: 220px;
+    background: #141442;
+    border: 5px outset #3ad647;
+    padding: 30px;
+    transition: background cubic-bezier(0.23,1,0.32,1) .1s;
+}
+
+.pokedex > .pokedex-items > .pokedex-item:hover {
+    background: #203074;
+}
+
+.pokedex > .pokedex-items > .pokedex-item > .poke-img {
+    aspect-ratio: 1/1;
+    width: 100%;
+}
+
+.pokedex > .pokedex-items > .pokedex-item > .poke-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    font-family: 'Russo One';
+    font-size: 1.15rem;
+    text-transform: uppercase;
+}
+
+#pokemon-list {
+    max-height: 80px;
+    flex-grow: 2;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 70px;
+    aspect-ratio: 1;
+    --c:no-repeat repeating-linear-gradient(90deg,#fff 0 calc(100%/7), transparent 0 calc(200%/7));
+    background: var(--c),var(--c),var(--c),var(--c);
+    background-size: 140% 26%;
+    animation: l27 .75s infinite linear;
+}
+
+@keyframes l27 {
+    0%,20%   {background-position:0    calc(0*100%/3),100% calc(1*100%/3),0    calc(2*100%/3),100% calc(3*100%/3)}
+    80%,100% {background-position:100% calc(0*100%/3),0    calc(1*100%/3),100% calc(2*100%/3),0    calc(3*100%/3)}
+}
+
+@media screen and (max-width: 650px) {
+    #current-page {
+        display: none;
+    }
+
+    .pager {
+        justify-content: center;
+    }
+
+    h4#title {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .pokedex > .pokedex-items > .pokedex-item {
+        padding: 20px;
+        width: 180px;
+    }
+
+    .pokedex > .pokedex-items {
+        grid-template: repeat(2, 225px) / repeat(5, 180px);
+    }
+
+    .pokedex > .pokedex-items > .pokedex-item  > span.poke-name {
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    h4#title {
+        font-size: 1.5rem;
+    }
+
+    .box-container {
+        padding: 10px 20px;
+    }
+
+    .pager > .pagination > .page-selector > input.page-selector-item,
+    .pager > .pagination > .page-selector > .page-selector-item {
+        width: 28px;
+        height: 28px;
+        font-size: 1rem;
+    }
+
+    .pager > .pagination > .previous-page, .pagination > .next-page {
+        width: 28px;
+        height: 28px;
+    }
+
+   .pokedex > .pokedex-items > .pokedex-item {
+        gap: 5px;
+        padding: 15px;
+        width: 160px;
+    }
+
+    .pokedex > .pokedex-items {
+        grid-template: repeat(2, 200px) / repeat(5, 160px);
+    }
+}
