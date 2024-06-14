@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="../layout/src/main.css">
-    <link rel="stylesheet" href="../node_modules/remixicon/fonts/remixicon.css">
+    <link rel="stylesheet" href="../layout/src/remixicon/fonts/remixicon.css">
     <link rel="stylesheet" href="../layout/src/pager.css">
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
@@ -33,6 +33,26 @@
                 <div class="previous-page"></div>
                 <div class="page-selector"></div>
                 <div class="next-page"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pop-up container -->
+    <div class="pop-up-container d-none">
+        <div class="pop-up" id="character-details">
+            <div id="poke-name-text">
+                <h5>Poké Details: <span id="poke-name">null</span></h5>
+                <i class="ri-close-line icon-lg" onclick="togglePopUp('.pop-up-container')"></i>
+            </div>
+            
+            <div id="poke-info">
+                <div id="poke-pic"></div>
+    
+                <div id="poke-details">
+                    <span>Height: <span id="poke-height">0</span> cm</span>
+                    <span>Types: <span id="poke-types">null</span></span>
+                    <span>Abilities: <span id="poke-abilities">null</span></span>
+                </div>
             </div>
         </div>
     </div>

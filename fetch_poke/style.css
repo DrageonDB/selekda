@@ -72,6 +72,7 @@ body {
 
 .pokedex > .pokedex-items > .pokedex-item > .poke-img {
     aspect-ratio: 1/1;
+    image-rendering: pixelated;
     width: 100%;
 }
 
@@ -88,6 +89,75 @@ body {
 #pokemon-list {
     max-height: 80px;
     flex-grow: 2;
+}
+
+.pop-up-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: #0000007F;
+    width: 100%;
+    height: 100vh;
+    top: 0; left: 0;
+}
+
+.pop-up-container .pop-up {
+    display: flex;
+    flex-direction: column;
+    background: #141442;
+    border: 5px outset #3ad647;
+    padding: 30px;
+}
+
+#character-details {
+    aspect-ratio: 5 / 3;
+    display: flex;
+    flex-direction: column;
+    max-height: 65%;
+    width: 900px;
+    max-width: 85%;
+}
+
+#character-details > #poke-name-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+#character-details > #poke-info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+}
+
+#character-details > #poke-info > #poke-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 7px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #fff transparent;
+}
+#character-details > #poke-info > #poke-details > span {
+    font-weight: 600;
+}
+
+#character-details > #poke-info > #poke-details > span > span {
+    text-transform: capitalize;
+}
+
+#character-details > #poke-info > #poke-pic {
+    aspect-ratio: 1 / 1;
+    background: url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png) no-repeat center, #0000003F;
+    background-size: contain !important;
+    image-rendering: pixelated;
+    width: max-content;
 }
 
 /* HTML: <div class="loader"></div> */
@@ -131,6 +201,23 @@ body {
 
     .pokedex > .pokedex-items > .pokedex-item  > span.poke-name {
         font-size: 0.85rem;
+    }
+
+    #character-details {
+        aspect-ratio: 3 / 4 !important;
+        width: 400px;
+        max-height: none;
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    #character-details > #poke-info {
+        flex-direction: column;
+    }
+
+    #character-details > #poke-info > #poke-pic {
+        width: auto;
+        height: max-content;
     }
 }
 

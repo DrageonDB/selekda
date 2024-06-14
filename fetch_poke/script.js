@@ -29,6 +29,46 @@ function displayLoading(cond) {
     }
 }
 
+// Close pop-up
+function togglePopUp(elementId) {
+    const el = document.querySelector(elementId);
+    el.classList.toggle('d-none');
+}
+
+// show poke info
+async function showPokeInfo(pokeName) {
+    // Pokes
+    const pokeNameValue = document.querySelector('#poke-name');
+    const pokeHeightValue = document.querySelector('#poke-height');
+    const pokeTypesValue = document.querySelector('#poke-types');
+    const pokeAbilitiesValue = document.querySelector('#poke-abilities');
+    const pokePicValue = document.querySelector('#poke-pic');
+
+    // Poke Name getter
+    const valueOfPoke = listOfPokeContents[pokeName];
+    
+    // Then change it
+    console.log(valueOfPoke);
+    pokeNameValue.innerHTML = pokeName;
+    pokeHeightValue.innerHTML = valueOfPoke['height'] ?? 'N/A';
+
+    let pokeTypes = [];
+    for (let i = 0; i < valueOfPoke['types'].length; i++) {
+        pokeTypes.push(valueOfPoke['types'][i]['type']['name']);
+    }
+    pokeTypesValue.innerHTML = pokeTypes.join(', ');
+
+    let abilities = [];
+    valueOfPoke['abilities'].forEach(item => {
+        abilities.push(item);
+    });
+    pokeAbilitiesValue.innerHTML = abilities.join(', ');
+    pokePicValue.style.background = 'url(' + valueOfPoke['spriteImg'] + ') no-repeat center, #0000003F'
+    
+    // toggle then
+    togglePopUp('.pop-up-container');
+}
+
 // Outer function
 async function getListOfPokes(page = 1) {
     displayLoading(true);
@@ -69,7 +109,7 @@ async function getListOfPokeContents() {
     responses.forEach(item => {
         const build = Object.assign({}, objectBuilder);
         build.spriteImg = item['sprites']['front_default'];
-        build.height = item['game_indices']['height'];
+        build.height = item['height'];
         item['types'].forEach(item => {
             build.types.push(item);
         });
