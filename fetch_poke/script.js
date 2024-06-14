@@ -48,7 +48,6 @@ async function showPokeInfo(pokeName) {
     const valueOfPoke = listOfPokeContents[pokeName];
     
     // Then change it
-    console.log(valueOfPoke);
     pokeNameValue.innerHTML = pokeName;
     pokeHeightValue.innerHTML = valueOfPoke['height'] ?? 'N/A';
 
