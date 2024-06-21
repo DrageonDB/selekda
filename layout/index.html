@@ -5,41 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="./src/main.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="/node_modules/remixicon/fonts/remixicon.css">
     <title>Document</title>
 </head>
 <body>
-    <style>
-        #search-bar {
-            width: 100% !important;
-            max-width: 500px;
-        }
-
-        #user button {
-            width: 120px;
-        }
-
-        #sponsored-by > .sponsored-by-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 144px;
-            height: 80px;
-            padding: 10px;
-            background: #00000028;
-        }
-
-        #sponsored-by > .sponsored-by-item > img {
-            height: 100%;
-        }
-
-        #gallery-thumbnail > .swiper-items > .swiper-item {
-            width: 270px;
-            height: 195.5px;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
     <section class="bg-heading-primary py-10">
         <div class="d-flex-row justify-content-between">
             <div id="social-media" class="d-flex-row gap-20">
@@ -80,7 +50,7 @@
                     <h1>Lorem ipsum dolor sit amet consectetur.</h1>
                     <p>Lorem ipsum dolor sit amet consectetur. Adipiscing nunc nulla tellus augue amet vel. At magnis ultrices leo varius scelerisque enim ornare a vitae. Cursus netus vel vehicula porttitor purus. Egestas duis ac a justo.</p>
                     <div class="horizontal-group">
-                        <button style="width:200px;">See Our team squad</button>
+                        <button style="width:200px;" data-redirect-href="./detail-team-squad.html">See Our team squad</button>
                         <button style="width:200px;" class="btn-secondary">Play selekdash</button>
                     </div>
                 </div>
@@ -145,5 +115,92 @@
             </div>
         </div>
     </section>
+
+    <!-- Team Squad List -->
+    <section class="w-100 d-flex-column py-60 gap-30 background-secondary align-items-center">
+        <h3>Team Squad List</h3>
+
+        <div class="swiper" id="gallery-thumbnail">
+            <a href="#">
+                <img src="./assets/move-left-lg.svg">
+            </a>
+            <!-- Place here -->
+            <div class="swiper-items" id="squad-list">
+                <a href="#" class="swiper-item wh-200" data-background-image="./img/mascot.png"></a>
+                <a href="#" class="swiper-item wh-200" data-background-image="./img/mascot.png"></a>
+                <a href="#" class="swiper-item wh-200" data-background-image="./img/mascot.png"></a>
+                <a href="#" class="swiper-item wh-200" data-background-image="./img/mascot.png"></a>
+                <a href="#" class="swiper-item wh-200" data-background-image="./img/mascot.png"></a>
+                <a href="#" class="swiper-item wh-200" data-background-image="./img/mascot.png"></a>
+                <a href="#" class="swiper-item wh-200" data-background-image="./img/mascot.png"></a>
+                <a href="#" class="swiper-item wh-200" data-background-image="./img/mascot.png"></a>
+                <a href="#" class="swiper-item wh-200" data-background-image="./img/mascot.png"></a>
+                <a href="#" class="swiper-item wh-200" data-background-image="./img/mascot.png"></a>
+            </div>
+            <!-- Next -->
+            <a href="#">
+                <img src="./assets/move-right-lg.svg">
+            </a>
+        </div>
+
+        <button style="width: 400px;">See More</button>
+    </section>
+    
+    <!-- Our Team Members -->
+    <section class="w-100 d-flex-column py-60 gap-30 background-primary align-items-center section-bordered">
+        <h3>Our Team Members</h3>
+
+        <div class="swiper gap-10" id="team-members-section">
+            <a href="#">
+                <img src="./assets/move-left-lg.svg">
+            </a>
+            <!-- Place here -->
+            <div class="swiper-items" id="team-members">
+                <a href="#" class="swiper-item team-member-item">
+                    <div data-background-image="./uploads/galleries/gallery-1.png" class="team-member-item-image wh-200 bordered"></div>
+                    <div class="team-member-details">
+                        <h4>John Doe</h4>
+                        <span>Lorem ipsum dolor sit amet consectetur.</span>
+                    </div>
+                </a>
+                <a href="#" class="swiper-item team-member-item">
+                    <div data-background-image="./uploads/galleries/gallery-1.png" class="team-member-item-image wh-200 bordered"></div>
+                    <div class="team-member-details">
+                        <h4>John Doe</h4>
+                        <span>Lorem ipsum dolor sit amet consectetur.</span>
+                    </div>
+                </a>
+                <a href="#" class="swiper-item team-member-item">
+                    <div data-background-image="./uploads/galleries/gallery-1.png" class="team-member-item-image wh-200 bordered"></div>
+                    <div class="team-member-details">
+                        <h4>John Doe</h4>
+                        <span>Lorem ipsum dolor sit amet consectetur.</span>
+                    </div>
+                </a>
+                <a href="#" class="swiper-item team-member-item">
+                    <div data-background-image="./uploads/galleries/gallery-1.png" class="team-member-item-image wh-200 bordered"></div>
+                    <div class="team-member-details">
+                        <h4>John Doe</h4>
+                        <span>Lorem ipsum dolor sit amet consectetur.</span>
+                    </div>
+                </a>
+            </div>
+            <!-- Next -->
+            <a href="#">
+                <img src="./assets/move-right-lg.svg">
+            </a>
+        </div>
+
+        <button style="width: 400px;">See More</button>
+    </section>
+
+    <footer class="w-100 d-flex-column py-10 gap-5 background-secondary align-items-center">
+        <span>Lorem ipsum dolor sit amet consectetur. Lorem ullamcorper proin ac mauris.</span>
+        <span>Created by ....</span>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./src/styler.js" type="text/javascript"></script>
+    <script src="./src/pager.js"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@ h4 {font-family: 'Russo One';text-transform: uppercase;font-size: 2rem;}
 h5 {font-family: 'Russo One';text-transform: uppercase;font-size: 1.5rem;}
 h6 {font-family: 'Russo One';text-transform: uppercase;font-size: 1rem;}
 
-h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {font-family: inherit; text-transform: inherit; font-size: inherit !important;}
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {font-family: inherit; color: inherit !important; text-transform: inherit; font-size: inherit !important;}
 
 /* Header footer prefabs */
 header, footer {
@@ -108,6 +108,7 @@ a {
     font-weight: inherit;
     color: var(--black);
     font-style: inherit;
+    text-decoration: none;
 }
 
 /* font-size */
@@ -591,6 +592,35 @@ a {
 .h-90 {height: 90%;}
 .h-100 {height: 100%;}
 
+.wh-10 {width: 10px; height: 10px;}
+.wh-20 {width: 20px; height: 20px;}
+.wh-30 {width: 30px; height: 30px;}
+.wh-40 {width: 40px; height: 40px;}
+.wh-50 {width: 50px; height: 50px;}
+.wh-60 {width: 60px; height: 60px;}
+.wh-70 {width: 70px; height: 70px;}
+.wh-80 {width: 80px; height: 80px;}
+.wh-90 {width: 90px; height: 90px;}
+.wh-100 {width: 100px; height: 100px;}
+.wh-150 {width: 150px; height: 150px;}
+.wh-200 {width: 200px; height: 200px;}
+.wh-250 {width: 250px; height: 250px;}
+.wh-300 {width: 300px; height: 300px;}
+.wh-350 {width: 350px; height: 350px;}
+.wh-400 {width: 400px; height: 400px;}
+.wh-450 {width: 450px; height: 450px;}
+.wh-500 {width: 500px; height: 500px;}
+.wh-550 {width: 550px; height: 550px;}
+.wh-600 {width: 600px; height: 600px;}
+.wh-650 {width: 650px; height: 650px;}
+.wh-700 {width: 700px; height: 700px;}
+.wh-750 {width: 750px; height: 750px;}
+.wh-800 {width: 800px; height: 800px;}
+.wh-850 {width: 850px; height: 850px;}
+.wh-900 {width: 900px; height: 900px;}
+.wh-950 {width: 950px; height: 950px;}
+.wh-1000 {width: 100px; height: 100px;}
+
 .vh-10 {height: 10vh;}
 .vh-20 {height: 20vh;}
 .vh-30 {height: 30vh;}
@@ -953,4 +983,18 @@ section {
     display: inherit;
     flex-direction: inherit;
     justify-content: inherit;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background: #0F1218;
+    color: var(--white);
+}
+
+/* d-grid */
+.d-grid-4x2 {
+    display: grid !important;
+    grid-template-columns: repeat(4, auto) !important;
+    grid-template-rows: repeat(3, auto) !important;
 }
